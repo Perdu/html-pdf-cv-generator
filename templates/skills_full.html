@@ -1,0 +1,53 @@
+    <div class="right">
+      <h2>Technical skills</h2>
+    </div>
+    <ul class="par_right">
+      <li>
+	<div class="date">Programming</div>
+	<div class="content">
+	  <table class="skills">
+	    <tr>
+	      <td>Perl</td>
+	      {%- if sysadmin!=True -%}
+	      <td>OpenCL</td>
+	      {%- endif -%}
+	      <td>C++</td>
+	      <td>x86</td>
+	    </tr>
+	    <tr>
+	      <td>PHP</td>
+	      <td>JavaScript</td>
+	      <td>SQL</td>
+	      <td>C</td>
+	    </tr>
+	    <tr>
+	      <td>Python</td>
+	      {%- if sysadmin!=True -%}
+	      <td>OpenCV</td>
+	      {%- endif -%}
+	      <td>Bash</td>
+	      <td>Git</td>
+	    </tr>
+	  </table>
+	</div>
+      </li>
+      <li>
+	<div class="date">System administration</div>
+	<div class="content">
+	  <table class="skills">
+            <tr>
+	      <td>Debian</td>
+	      <td>Arch Linux</td>
+	      <td>Ansible</td>
+	    </tr>
+	    {%- if sysadmin==True -%}
+            <tr>
+              <td>Apache</td>
+              <td>MySQL</td>
+              <td>OpenWRT</td>
+	    </tr>
+	    {%- endif -%}
+          </table>
+	</div>
+      </li>
+    </ul>

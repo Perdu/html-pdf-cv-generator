@@ -1,0 +1,198 @@
+    <style type="text/css">
+      a {
+	  color:light-red;
+	  text-decoration: none;
+      }
+      .conf {
+	  font-size:12px;
+      }
+      .infos {
+      font-style:italic;
+      font-size:14px;
+      margin-bottom:-2px;
+      }
+      .date {
+      float:left;
+      }
+      h2 {
+      margin-top:-10px;
+//    margin-top:-5px;
+      margin-bottom:-15px;
+      padding-left:5px;
+      }
+      .par, .par_left, .par_right {
+      background-color:white;
+      text-align:left;
+      border-style:ridge;
+      border-radius:10px;
+      padding:2px;
+      padding-left:5px;
+      }
+      .par {
+      width:98%;
+      }
+      .par:hover, .par_left:hover, .par_right:hover {
+      background-color:#CDF7F7;
+      }
+      .par_left, .left {
+      float:left;
+      width:47%;
+      }
+      .par_left {
+      margin-bottom:5px;
+      }
+      .par_right {
+      float:right;
+      width:47%;
+      }
+      .right {
+      float:left;
+      margin-left:15px;
+      }
+      .clear {
+      clear:both;
+      margin-top:10px;
+      }
+      .content {
+      margin:0px;
+      margin-left:150px;
+      }
+      .content2 {
+      margin:5px;
+      margin-left:110px;
+      }
+      .content3 {
+      padding-left:4px;
+      }
+      .content4 {
+      padding-top:3px;
+      padding-left:3px;
+      }
+      .skills td {
+      text-align:center;
+      width:300px;
+      border-radius:5px;
+      background-color:#B8FFFF;
+      }
+      body {
+//      background-color:#F6F7FF;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:14px;
+      border-radius         : 15px;
+      -o-border-radius      : 15px;
+      -moz-border-radius    : 15px;
+      -webkit-border-radius : 15px;
+      box-shadow         : 0px 1px 10px #888;
+      -o-box-shadow      : 0px 1px 10px #888;
+      -moz-box-shadow    : 0px 1px 10px #888;
+      -webkit-box-shadow : 0px 1px 10px #888;
+      width: 720px;
+      margin: 2em auto;
+      padding: 1em 2em;
+      }
+      html {
+      background:linear-gradient(#88CCFF, white);
+      }
+      ul {
+      list-style-type:none;
+      }
+      .bulleted {
+      list-style-type:disc;
+      }
+      .rws {
+      padding:3px;
+      border-radius:5px;
+      background-color:#B8FFFF;
+      text-align:center;
+      }
+      .photo {
+      float:right;
+      margin-top:-5px;
+      }
+      .img_photo {
+      height:120px;
+      }
+      .head {
+      width:700px;
+      }
+      .basdepage {display:none;}
+      .renvoi { display:none;}
+      .noprint_button {
+      -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+      -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+      box-shadow:inset 0px 1px 0px 0px #ffffff;
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+      background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+      background-color:#ededed;
+      -webkit-border-top-left-radius:6px;
+      -moz-border-radius-topleft:6px;
+      border-top-left-radius:6px;
+      -webkit-border-top-right-radius:6px;
+      -moz-border-radius-topright:6px;
+      border-top-right-radius:6px;
+      -webkit-border-bottom-right-radius:6px;
+      -moz-border-radius-bottomright:6px;
+      border-bottom-right-radius:6px;
+      -webkit-border-bottom-left-radius:6px;
+      -moz-border-radius-bottomleft:6px;
+      border-bottom-left-radius:6px;
+      text-indent:0;
+      border:1px solid #dcdcdc;
+      color:#777777;
+      font-family:arial;
+      font-size:15px;
+      font-weight:bold;
+      font-style:normal;
+      height:30px;
+      line-height:30px;
+      width:60px;
+      text-decoration:none;
+      text-align:center;
+      text-shadow:1px 1px 0px #ffffff;
+      margin-left:auto;
+      margin-right:auto;
+      }
+      .noprint_button:hover {
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+      background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+      }
+      @media print {
+      .noprint { display: none; }
+      .noprint_button { display: none; }
+      .space { height: 70px; }
+      body {
+      background-color:white;
+      font-size:13px;
+      padding-bottom: 5.5em;
+      }
+      h2 { font-size:18px; }
+      .rws, .skills td {
+      border:solid;
+      border-width:1px;
+      background-color:white;      
+      }
+      a {
+       color:black;
+       text-decoration: none
+      }
+      .basdepage {
+      display:block;
+      font-size:10px;
+      width:800px;
+      margin-bottom: {% if bdp_length is defined %}{{ bdp_length }}{% else %}90{% endif %}px;
+      }
+      .renvoi {
+      display:inline;
+      position: relative;
+      bottom: 1px;
+      font-size: .7em;
+      line-height: .7em;
+      vertical-align:super;
+      text-decoration:none;;
+      }
+      .bdp {
+      float:left;
+      width:370px;
+      }
+      }
+    </style>

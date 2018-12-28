@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block css %}
+  {% with bdp_length=70 %}
+    {% include 'css.html' %}
+  {% endwith %}
+{% endblock %}
+{% block coordinates %}
+  {% with full=False %}
+    {% include 'coordinates.html' %}
+  {% endwith %}
+{% endblock %}
+{% block xp %}
+  {% with short=True %}
+    {% include 'xp_full.html' %}
+  {% endwith %}
+{% endblock %}
+{% block studies %}{% include 'studies_full.html' %}{% endblock %}
+{% block languages %}{% include 'languages.html' %}{% endblock %}
+{% block skills %}
+  {% with sysadmin=True %}
+    {% include 'skills_full.html' %}
+  {% endwith %}
+{% endblock %}
+{% block space2 %}{% include 'space.html' %}{% endblock %}
+{% block misc %}{% include 'misc_full.html' %}{% endblock %}
+{% block bdp %}{% include 'bdp.html' %}{% endblock %}

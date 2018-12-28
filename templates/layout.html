@@ -1,0 +1,83 @@
+{%- macro renvoi(url, text, url_short=None) -%}
+  {%- if url is not defined -%}
+    {%- set text = "ERROOOOOOOOOOOOOOOOOOOOOOOOO00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000OR" -%}
+  {%- endif -%}
+  {%- if urls_dic.in_(url) -%}
+    {%- set used_nb = urls_dic.get(url) -%}
+  {%- else -%}
+    {%- set hack = nb.inc() -%}
+    {%- set hack = urls_dic.set(url, nb.get()) -%}
+    {%- set used_nb = nb.get() -%}
+  {%- endif -%}
+  {%- if url_short != None -%}
+    {%- set url = url_short -%}
+  {%- endif -%}
+<a href="{{ url }}">{{ text|safe }}<span class="renvoi">{{ used_nb }}</span></a>
+{%- endmacro %}
+
+{%- set url_gpg='gpg' -%}
+{%- set url_gpg_full='https://ploudseeker.com/CV/gpg' -%}
+{%- set url_stda14='https://bit.ly/stda2014' -%}
+{%- set url_phdday15='http://phd-day.citi-lab.fr/2015/participants/cmatte.html' -%}
+{%- set url_geolocattack='https://hal.inria.fr/hal-01176842' -%}
+{%- set url_lig='http://www.liglab.fr' -%}
+{%- set url_gitmediawiki='https://github.com/moy/Git-Mediawiki/wiki' -%}
+{%- set url_grehack='http://grehack.fr' -%}
+{%- set url_misc96='https://bit.ly/misc96' -%}
+{%- set url_these='https://hal.inria.fr/tel-01659783v1' -%}
+{%- set url_polecom='http://ploudseeker.com/sysadmin_polecom_en.txt' -%}
+{%- set url_polecom_short='sysadmin_polecom_en.txt' -%}
+{%- set url_sistearth='http://www.sistearth.com' -%}
+{%- set url_asiaccs16='http://meeting.xidian.edu.cn/conference/AsiaCCS2016/papers.html' -%}
+{%- set url_misc81='https://bit.ly/misc81' -%}
+{%- set url_wisec15='https://www.sigsac.org/wisec/WiSec2015' -%}
+{%- set url_wisec16='https://www.sigsac.org/wisec/WiSec2016' -%}
+{%- set url_wisec16_pdf='https://lirias.kuleuven.be/bitstream/123456789/547642/1/wisec2016.pdf' -%}
+{%- set url_wisec16_pdf_demo='https://hal.inria.fr/hal-01330479/document' -%}
+{%- set url_wombat='https://hal.inria.fr/hal-01679007/' -%}
+{%- set url_glmf202='https://bit.ly/glmf202' -%}
+{%- set url_danse='https://ploudseeker.com/danse' -%}
+{%- set url_danse_short='/danse' -%}
+{%- set url_terradata='http://www.cite-sciences.fr/fr/au-programme/expos-temporaires/terra-data/' -%}
+{%- set url_phdday16='http://phd-day.citi-lab.fr/2016/index.html' -%}
+{%- set url_apvp14='http://apvp14.orange-labs.fr/?page_id=2' -%}
+{%- set url_apvp16='https://apvp2016.sciencesconf.org/resource/page/id/2' -%}
+{%- set url_apvp17='https://apvp2017.sciencesconf.org/' -%}
+{%- set url_slides_these='https://ploudseeker.com/files/docs/slides_these.pdf' -%}
+{%- set url_glmfhs84='https://bit.ly/glmfhs84' -%}
+{%- set url_asiaccs_pdf='http://papers.mathyvanhoef.com/asiaccs2016.pdf' -%}
+{%- set url_publi_asiaccs16='https://hal.inria.fr/hal-01282900' -%}
+{%- set url_publi_panoptiphone='https://hal.inria.fr/hal-01330479' -%}
+{%- set url_publi_timing='https://hal.inria.fr/hal-01330476' -%}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>CV Célestin Matte</title>
+{% block css %}{% endblock %}
+  </head>
+  <body>
+    <div class="head">
+      <div class="photo">
+	<img class="img_photo" src="static/photo.jpg" alt="photo" />
+      </div>
+      <div class="infos">
+{% block coordinates %}{% endblock %}
+      </div>
+    </div>
+    <br/>
+{% block publications %}{% endblock %}
+{% block xp %}{% endblock %}
+{% block space %}{% endblock %}
+{% block studies %}{% endblock %}
+{% block languages %}{% endblock %}
+{% block skills %}{% endblock %}
+{% block space2 %}{% endblock %}
+{% block misc %}{% endblock %}
+{% block bdp %}{% endblock %}
+    <div class="noprint_button" onclick="javascript:window.print();">
+      print
+    </div>
+  </body>
+</html>

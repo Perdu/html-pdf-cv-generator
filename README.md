@@ -1,5 +1,5 @@
 # html-cv-generator
-A generator for résumés in HTML and PDF using Flask. Generator for https://ploudseeker.com/CV/
+A generator for résumés in HTML and PDF using Flask. Generator for https://cmatte.me/CV/
 
 ## Features
 - CV renders correctly in both HTML and PDF formats.

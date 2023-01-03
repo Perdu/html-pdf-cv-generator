@@ -41,9 +41,14 @@ class Dict(object):
         return html
 
 # define the different kinds of CV here
+@app.route('/', methods=['GET'])
 @app.route('/normal', methods=['GET'])
 def disp_CV():
     return render_template("normal.html", nb=Counter(), urls_dic=Dict())
+
+@app.route('/pdf', methods=['GET'])
+def disp_CV_pdf():
+    return render_template("pdf_version.html", nb=Counter(), urls_dic=Dict())
 
 @app.route('/engineer', methods=['GET'])
 def disp_engineer():

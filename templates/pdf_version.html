@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block css %}
   {% with bdp_length=125 %}
-    {% include 'css.html' %}
+    {% include 'css_pdf.html' %}
   {% endwith %}
 {% endblock %}
 {% block coordinates %}
@@ -9,8 +9,6 @@
     {% include 'coordinates.html' %}
   {% endwith %}
 {% endblock %}
-{% block software %}{% include 'software.html' %}{% endblock %}
-{% block teaching %}{% include 'teaching.html' %}{% endblock %}
 {% block publications %}{% include 'full_publications_list.html' %}{% endblock %}
 {% block xp %}{% include 'xp_full.html' %}{% endblock %}
 {% block studies %}{% include 'studies_full.html' %}{% endblock %}
@@ -18,6 +16,5 @@
 {% block languages %}{% include 'languages.html' %}{% endblock %}
 {% block skills %}{% include 'skills_full.html' %}{% endblock %}
 {% block space2 %}{% include 'space.html' %}{% endblock %}
-{% block conferences %}{% include 'conferences.html' %}{% endblock %}
 {% block misc %}{% include 'misc_full.html' %}{% endblock %}
 {% block bdp %}{% include 'bdp.html' %}{% endblock %}
